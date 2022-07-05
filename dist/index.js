@@ -259,7 +259,7 @@ function installCLLIOnWindows() {
             fs.mkdirSync(context_1.WINDOWS_KOOCLI_PATH);
         }
         
-        const cliPath = yield tc.downloadTool(context_1.WINDOWS_KOOCLI_URL, context_1.WINDOWS_KOOCLI_PATH);
+        const cliPath = yield tc.downloadTool(context_1.WINDOWS_KOOCLI_URL, `${context_1.WINDOWS_KOOCLI_PATH}/hcloud.zip`);
         const cliExtractedFolder = yield tc.extractZip(cliPath, context_1.WINDOWS_KOOCLI_PATH);
         core.addPath(cliExtractedFolder);
     });
