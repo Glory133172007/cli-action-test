@@ -256,6 +256,7 @@ function installCLLIOnWindows() {
     return __awaiter(this, void 0, void 0, function* () {
         core.info('current system is Windows.');
 //         fs.mkdirSync(context_1.WINDOWS_KOOCLI_PATH);
+        yield tools.execCommand(`md ${context_1.WINDOWS_KOOCLI_PATH}`)
         const cliPath = yield tc.downloadTool(context_1.WINDOWS_KOOCLI_URL, context_1.WINDOWS_KOOCLI_PATH);
         const cliExtractedFolder = yield tc.extractZip(cliPath, context_1.WINDOWS_KOOCLI_PATH);
         core.addPath(cliExtractedFolder);
