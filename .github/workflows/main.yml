@@ -5,7 +5,7 @@ on:
         master-dev
 jobs:
   List-Versions:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       # 代码检出
       - name: checkout
@@ -20,3 +20,5 @@ jobs:
           secret_key: ${{ secrets.SECRETACCESSKEY }}
           region: 'cn-north-4'
           command_list: 'hcloud ECS NovaListVersions'
+          
+      - run: hcloud version
