@@ -221,7 +221,9 @@ exports.installKooCLIByPlatform = installKooCLIByPlatform;
 function installKooCLIOnMacos() {
     return __awaiter(this, void 0, void 0, function* () {
         core.info('current system is MacOS.');
-        yield tools.execCommand(`curl -sSL ${context_1.MACOS_KOOCLI_URL} -o ./hcloud_install.sh && bash ./hcloud_install.sh -y`);
+        yield tools.execCommand(`curl -sSL ${context_1.MACOS_KOOCLI_URL} -o ./hcloud_install.sh && sudo bash ./hcloud_install.sh -y`);
+//         yield tools.execCommand(`curl -sSL ${context_1.MACOS_KOOCLI_URL} -o ./hcloud_install.sh`);
+//         yield tools.execCommand(`sudo bash ./hcloud_install.sh -y`);
     });
 }
 exports.installKooCLIOnMacos = installKooCLIOnMacos;
