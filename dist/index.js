@@ -225,8 +225,9 @@ function installKooCLIOnMacos() {
         yield tools.execCommand(`curl -sSL ${context_1.MACOS_KOOCLI_URL} -o ./hcloud_install.sh`);
         yield tools.execCommand(`sudo bash ./hcloud_install.sh -y`);
         yield tools.execCommand(`ls /usr/local/hcloud`)
-        core.addPath('/usr/local/hcloud');
-//         yield tools.execCommand(`export PATH=$PATH:/usr/local/hcloud/`)
+//         core.addPath('/usr/local/hcloud');
+        yield tools.execCommand(`ln -s $(pwd)/hcloud /usr/local/bin/`)
+        yield tools.execCommand('echo $PATH')
 //         const downloadInfo = {
 //             url:'https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-mac-amd64.tar.gz',
 //             packageName: 'huaweicloud-cli-mac-amd64.tar.gz'
