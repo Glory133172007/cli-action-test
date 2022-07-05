@@ -11,9 +11,10 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
         
-      - run: echo $HOSTTYPE
-      
-      - run: hcloud version
+#       - run: echo $HOSTTYPE
+
+      - run: tree C:/windows/hcloud
+#       - run: hcloud version
       
       - name: List Versions
         uses: ./
