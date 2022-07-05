@@ -299,7 +299,7 @@ function getLinuxKooCLIDownloadInfo(hostType) {
         downloadInfo.url = context_1.LINUX_ARM_KOOCLI_URL;
         downloadInfo.packageName = context_1.LINUX_ARM_KOOCLI_PACKAGE_NAME;
     }
-    if (hostType === 'x86_64') {
+    if (hostType === 'x64') {
         downloadInfo.url = context_1.LINUX_AMD_KOOCLI_URL;
         downloadInfo.packageName = context_1.LINUX_AMD_KOOCLI_PACKAGE_NAME;
     }
