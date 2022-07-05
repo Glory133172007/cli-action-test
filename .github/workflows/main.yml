@@ -5,9 +5,9 @@ on:
         master-dev
 jobs:
   List-Versions:
-#     runs-on: windows-latest
+    runs-on: windows-latest
 #     runs-on: macos-latest
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest  修改chmod方法  使用命令给777权限
     steps:
       # 代码检出
       - name: checkout
