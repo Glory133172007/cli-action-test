@@ -238,8 +238,8 @@ function installKooCLIOnLinux() {
             core.info(`KooCLI can be run on Linux AMD64 or Linux Arm64, your system is ${hostType}.`);
             return;
         }
-//         yield tools.execCommand(`sudo mkdir -p ${context_1.LINUX_KOOCLI_PATH}`);
-        io.mkdirP('/tmp/hcloud');
+        yield tools.execCommand(`sudo mkdir -p /tmp/hcloud`);
+//         io.mkdirP('/tmp/hcloud');
         fs.chmodSync('/tmp/hcloud', context_1.LINUX_KOOCLI_MOD);
         yield tools.execCommand(`curl -LO ${downloadInfo.url}`);
         core.info(`extract KooCLI to ${context_1.LINUX_KOOCLI_PATH}`);
