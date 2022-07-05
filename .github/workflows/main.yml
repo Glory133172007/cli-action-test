@@ -5,9 +5,9 @@ on:
         master-dev
 jobs:
   List-Versions:
-#     runs-on: windows-latest   修改tc下载文件， 加/hcloud.zip
-    runs-on: macos-latest
-#     runs-on: ubuntu-latest   # 修改chmod方法  使用命令给777权限
+#     runs-on: windows-latest   修改tc下载文件后缀， 加/hcloud.zip
+#     runs-on: macos-latest  # 修改安装方法， 可照搬linux，需要修改下载位置为/usr/local/hcloud, 直接使用/usr/hcloud提示权限不允许
+    runs-on: ubuntu-latest   # 修改chmod方法  给777权限   tools.execCommand(`sudo chmod -R 777 ${macosPath}`);
     steps:
       # 代码检出
       - name: checkout
