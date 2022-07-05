@@ -10,6 +10,9 @@ jobs:
       # 代码检出
       - name: checkout
         uses: actions/checkout@v2
+        
+      - run: echo $HOSTTYPE
+      
       - name: List Versions
         uses: ./
         with:
