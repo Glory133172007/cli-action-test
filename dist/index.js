@@ -34,7 +34,7 @@ exports.getInputs = exports.LINUX_AMD_KOOCLI_PACKAGE_NAME = exports.LINUX_AMD_KO
 const core = __importStar(__nccwpck_require__(186));
 exports.LINUX_KOOCLI_MOD = '755';
 exports.WINDOWS_KOOCLI_PATH = 'C:/windows/hcloud';
-exports.LINUX_KOOCLI_PATH = '/usr/hcloud';
+exports.LINUX_KOOCLI_PATH = '/tmp/hcloud';
 exports.MACOS_KOOCLI_URL = 'https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/hcloud_install.sh';
 exports.WINDOWS_KOOCLI_URL = 'https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-windows-amd64.zip';
 exports.LINUX_ARM_KOOCLI_URL = 'https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-linux-arm64.tar.gz';
@@ -238,7 +238,7 @@ function installKooCLIOnLinux() {
             core.info(`KooCLI can be run on Linux AMD64 or Linux Arm64, your system is ${hostType}.`);
             return;
         }
-        yield tools.execCommand(`sudo mkdir -p /tmp/hcloud`);
+        yield tools.execCommand(`sudo mkdir -p ${context_1.LINUX_KOOCLI_PATH}`);
 //         io.mkdirP('/tmp/hcloud');
 //         fs.chmodSync('/tmp/hcloud', context_1.LINUX_KOOCLI_MOD);
         yield tools.execCommand(`curl -LO ${downloadInfo.url}`);
