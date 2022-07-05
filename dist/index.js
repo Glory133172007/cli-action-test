@@ -241,7 +241,7 @@ function installKooCLIOnLinux() {
         yield tools.execCommand(`sudo mkdir -p ${context_1.LINUX_KOOCLI_PATH}`);
 //         io.mkdirP('/tmp/hcloud');
 //         fs.chmodSync('/tmp/hcloud', context_1.LINUX_KOOCLI_MOD);
-        yield tools.execCommand(`sudo chmod -R 777 ${context_1.LINUX_KOOCLI_PATH}`);
+        yield tools.execCommand(`sudo chmod -R ${context_1.LINUX_KOOCLI_MOD} ${context_1.LINUX_KOOCLI_PATH}`);
         yield tools.execCommand(`curl -LO ${downloadInfo.url}`);
         core.info(`extract KooCLI to ${context_1.LINUX_KOOCLI_PATH}`);
         yield tools.execCommand(`tar -zxvf ${downloadInfo.packageName} -C ${context_1.LINUX_KOOCLI_PATH}`);
