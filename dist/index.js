@@ -223,6 +223,7 @@ function installKooCLIOnMacos() {
         core.info('current system is MacOS.');
 //         yield tools.execCommand(`curl -sSL ${context_1.MACOS_KOOCLI_URL} -o ./hcloud_install.sh && sudo bash ./hcloud_install.sh -y`);
         yield tools.execCommand(`curl -sSL ${context_1.MACOS_KOOCLI_URL} -o ./hcloud_install.sh`);
+        yield tools.execCommand(`sudo chmod o+rwx /usr/local/hcloud/`)
         yield tools.execCommand(`sudo bash ./hcloud_install.sh -y`);
     });
 }
