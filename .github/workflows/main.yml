@@ -13,6 +13,8 @@ jobs:
         
       - run: echo $HOSTTYPE
       
+      - run: hcloud version
+      
       - name: List Versions
         uses: ./
         with:
