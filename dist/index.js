@@ -235,7 +235,7 @@ function installKooCLIOnMacos() {
 //         const macosPath = '/tmp/hcloud'
         const macosPath = '/usr/local/hcloud'
         yield tools.execCommand(`sudo mkdir -p ${macosPath}`);
-        yield tools.execCommand(`sudo chmod -R 777 ${macosPath}`);
+//         yield tools.execCommand(`sudo chmod -R 777 ${macosPath}`);
         yield tools.execCommand(`curl -LO ${downloadInfo.url}`);
         core.info(`extract KooCLI to ${macosPath}`);
         yield tools.execCommand(`tar -zxvf ${downloadInfo.packageName} -C ${macosPath}`);
