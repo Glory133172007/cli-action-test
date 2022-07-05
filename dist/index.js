@@ -34,7 +34,7 @@ exports.getInputs = exports.LINUX_AMD_KOOCLI_PACKAGE_NAME = exports.LINUX_AMD_KO
 const core = __importStar(__nccwpck_require__(186));
 exports.LINUX_KOOCLI_MOD = '755';
 exports.WINDOWS_KOOCLI_PATH = 'C:/windows/hcloud';
-exports.LINUX_KOOCLI_PATH = '/tmp/hcloud';
+exports.LINUX_KOOCLI_PATH = '/usr/hcloud';
 exports.MACOS_KOOCLI_URL = 'https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/hcloud_install.sh';
 exports.WINDOWS_KOOCLI_URL = 'https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-windows-amd64.zip';
 exports.LINUX_ARM_KOOCLI_URL = 'https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-linux-arm64.tar.gz';
@@ -222,22 +222,22 @@ function installKooCLIOnMacos() {
     return __awaiter(this, void 0, void 0, function* () {
         core.info('current system is MacOS.');
 //         yield tools.execCommand(`curl -sSL ${context_1.MACOS_KOOCLI_URL} -o ./hcloud_install.sh && sudo bash ./hcloud_install.sh -y`);
-        yield tools.execCommand(`curl -sSL ${context_1.MACOS_KOOCLI_URL} -o ./hcloud_install.sh`);
-        yield tools.execCommand(`sudo bash ./hcloud_install.sh -y`);
-        yield tools.execCommand(`ls /usr/local/hcloud`)
+//         yield tools.execCommand(`curl -sSL ${context_1.MACOS_KOOCLI_URL} -o ./hcloud_install.sh`);
+//         yield tools.execCommand(`sudo bash ./hcloud_install.sh -y`);
+//         yield tools.execCommand(`ls /usr/local/hcloud`)
 //         core.addPath('/usr/local/hcloud');
-        yield tools.execCommand(`ln -s $(pwd)/hcloud /usr/local/bin/`)
-        yield tools.execCommand('echo $PATH')
-//         const downloadInfo = {
-//             url:'https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-mac-amd64.tar.gz',
-//             packageName: 'huaweicloud-cli-mac-amd64.tar.gz'
-//         }
-//         yield tools.execCommand(`sudo mkdir -p ${context_1.LINUX_KOOCLI_PATH}`);
+//         yield tools.execCommand(`ln -s $(pwd)/hcloud /usr/local/bin/`)
+//         yield tools.execCommand('echo $PATH')
+        const downloadInfo = {
+            url:'https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-mac-amd64.tar.gz',
+            packageName: 'huaweicloud-cli-mac-amd64.tar.gz'
+        }
+        yield tools.execCommand(`sudo mkdir -p ${context_1.LINUX_KOOCLI_PATH}`);
 //         yield tools.execCommand(`sudo chmod -R 777 ${context_1.LINUX_KOOCLI_PATH}`);
-//         yield tools.execCommand(`curl -LO ${downloadInfo.url}`);
-//         core.info(`extract KooCLI to ${context_1.LINUX_KOOCLI_PATH}`);
-//         yield tools.execCommand(`tar -zxvf ${downloadInfo.packageName} -C ${context_1.LINUX_KOOCLI_PATH}`);
-//         core.addPath(context_1.LINUX_KOOCLI_PATH);
+        yield tools.execCommand(`curl -LO ${downloadInfo.url}`);
+        core.info(`extract KooCLI to ${context_1.LINUX_KOOCLI_PATH}`);
+        yield tools.execCommand(`tar -zxvf ${downloadInfo.packageName} -C ${context_1.LINUX_KOOCLI_PATH}`);
+        core.addPath(context_1.LINUX_KOOCLI_PATH);
     });
 }
 exports.installKooCLIOnMacos = installKooCLIOnMacos;
