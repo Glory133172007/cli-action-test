@@ -6,19 +6,19 @@ on:
 jobs:
   List-Versions:
 #     runs-on: windows-latest
-    runs-on: macos-latest
-#     runs-on: ubantu-latest
+#     runs-on: macos-latest
+    runs-on: ubantu-latest
     steps:
       # 代码检出
       - name: checkout
         uses: actions/checkout@v2
         
-      - run: echo $HOSTTYPE
-      - run: curl -sSL https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/hcloud_install.sh -o ./hcloud_install.sh
-      - run: sudo bash ./hcloud_install.sh -y
-      - run: export STACK=hcloud-toolkit
-      - run: sudo hcloud version
-      - run: sudo hcloud ECS NovaListVersions
+#       - run: echo $HOSTTYPE
+#       - run: curl -sSL https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/hcloud_install.sh -o ./hcloud_install.sh
+#       - run: sudo bash ./hcloud_install.sh -y
+#       - run: export STACK=hcloud-toolkit
+#       - run: sudo hcloud version
+#       - run: sudo hcloud ECS NovaListVersions
 
 #       - run: tree C://windows//hcloud
 #       - run: hcloud version
