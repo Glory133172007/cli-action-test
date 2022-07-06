@@ -22,6 +22,7 @@ jobs:
 
 #       - run: tree C://windows//hcloud
 #       - run: hcloud version
+      - run: groups
       
       - name: List Versions
         uses: ./
