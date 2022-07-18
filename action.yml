@@ -1,4 +1,4 @@
-name: 'HuaweiCloud Function graph Deploy'
+name: 'HuaweiCloud KooCLI'
 description: 'Setup KooCLI and add it to the PATH and set default configuration.'
 branding:
   icon: 'cloud'
