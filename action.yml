@@ -1,4 +1,4 @@
-name: 'HuaweiCloud KooCLI'
+name: 'Huawei Cloud OBS Helper'
 description: 'Setup KooCLI and add it to the PATH and set default configuration.'
 branding:
   icon: 'cloud'
