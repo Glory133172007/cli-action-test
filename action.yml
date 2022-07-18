@@ -1,4 +1,4 @@
-name: 'HuaweiCloud KooCLI Action'
+name: 'Imgbot'
 description: 'Setup KooCLI and add it to the PATH and set default configuration.'
 branding:
   icon: 'cloud'
