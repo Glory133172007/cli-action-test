@@ -9,13 +9,6 @@
 1.（推荐）[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/overview)上获取：云服务的API可在API Explorer上查看。您可以在API Explorer对应的API调试中，填写各参数的值，然后从“CLI示例”页签中直接获取命令。
 2.KooCLI帮助信息查询：具体查询方法可参考查看与[执行云服务操作命令](https://support.huaweicloud.com/qs-hcli/hcli_02_005.html)，Mac和Linux系统下查询方法类似。
 3.
-### 部署过程分为如下几个步骤
-一、代码容器构建build
-1) 代码检出  
-2) 打包maven项目  
-3) SWR容器镜像服务鉴权  
-4) 制作并推送镜像到SWR  
-5) 
 ## **参数说明:**
 |  参数名称  |  参数说明  |  默认值  |  是否必填  |
 |  :----:  |  ----  |  :----: |  :----:  |
